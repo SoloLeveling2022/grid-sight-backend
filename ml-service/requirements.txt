@@ -1,0 +1,12 @@
+fastapi>=0.115.0
+uvicorn>=0.30.0
+pydantic>=2.8.0
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.5.0
+python-dotenv>=1.0.1
+pymongo>=4.6.0
+dnspython>=2.6.0
+certifi
+python-multipart
+boto3
