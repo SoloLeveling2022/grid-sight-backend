@@ -370,6 +370,8 @@ async def get_repeat_offenders(
         {"$match": {
             "vehicle_number": {"$exists": True, "$ne": "UNKNOWN", "$type": "string"}
         }},
+        {"$sort": {"created_datetime": -1}},
+        {"$limit": 20000},
         {"$group": {
             "_id": "$vehicle_number",
             "caseCount": {"$sum": 1},
@@ -444,6 +446,8 @@ async def get_device_productivity(
     
     # Pipeline aggregates validation metrics per device
     pipeline = [
+        {"$sort": {"created_datetime": -1}},
+        {"$limit": 20000},
         {"$group": {
             "_id": "$device_id",
             "totalCases": {"$sum": 1},
