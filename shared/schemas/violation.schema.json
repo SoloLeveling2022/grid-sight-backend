@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ViolationCase",
+  "type": "object",
+  "properties": {
+    "caseId": { "type": "string" },
+    "plateNumber": { "type": "string" },
+    "violationType": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "location": {
+      "type": "object",
+      "properties": {
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "junctionName": { "type": "string" },
+        "corridor": { "type": "string" }
+      },
+      "required": ["latitude", "longitude", "junctionName"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "approved", "rejected"]
+    },
+    "confidenceScore": { "type": "number" }
+  },
+  "required": ["caseId", "plateNumber", "violationType", "timestamp", "location", "status"]
+}

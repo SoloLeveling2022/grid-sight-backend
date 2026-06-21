@@ -1,0 +1,16 @@
+{
+  "PROJECT_NAME": "GridSight Services",
+  "VERSION": "1.0.0",
+  "DEFAULTS": {
+    "PORT_BACKEND": 3001,
+    "PORT_ML": 8000,
+    "JURISDICTION": "Bengaluru Traffic Police"
+  },
+  "VIOLATION_TYPES": [
+    "No Parking",
+    "Footpath Parking",
+    "Double Parking",
+    "Junction Obstruction",
+    "Commercial Loading Obstruction"
+  ]
+}
